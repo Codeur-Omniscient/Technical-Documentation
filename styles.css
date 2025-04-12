@@ -1,0 +1,116 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    display: flex;
+  }
+  
+  /* Navbar Styles */
+  #navbar {
+    position: fixed;
+    min-width: 250px;
+    height: 100vh;
+    border-right: 2px solid #ddd;
+    background-color: #f8f9fa;
+    padding: 20px 0;
+  }
+  
+  #navbar header {
+    font-size: 1.8rem;
+    padding: 10px 15px 20px;
+    color: #2c3e50;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+  }
+  
+  .nav-link {
+    display: block;
+    padding: 12px 15px;
+    color: #3498db;
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .nav-link:hover {
+    background-color: #e9ecef;
+    color: #2980b9;
+  }
+  
+  /* Main Document Styles */
+  #main-doc {
+    margin-left: 250px;
+    padding: 30px;
+    max-width: 1000px;
+  }
+  
+  .main-section {
+    margin-bottom: 50px;
+  }
+  
+  .main-section header {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+  }
+  
+  .main-section p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+  }
+  
+  .main-section code {
+    display: block;
+    background-color: #f8f9fa;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+    border-left: 4px solid #3498db;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre;
+    line-height: 1.5;
+    overflow-x: auto;
+  }
+  
+  .main-section ul {
+    margin: 15px 0 15px 30px;
+  }
+  
+  .main-section li {
+    margin-bottom: 10px;
+  }
+  
+  /* Media Query for Responsive Design */
+  @media screen and (max-width: 768px) {
+    body {
+      flex-direction: column;
+    }
+    
+    #navbar {
+      position: relative;
+      width: 100%;
+      height: auto;
+      border-right: none;
+      border-bottom: 2px solid #ddd;
+      margin-bottom: 20px;
+    }
+    
+    #main-doc {
+      margin-left: 0;
+      padding: 20px;
+    }
+    
+    .main-section header {
+      font-size: 1.8rem;
+    }
+  }

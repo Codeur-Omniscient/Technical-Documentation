@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <header>CSS Documentation</header>
+        <a href="#Introduction" class="nav-link">Introduction</a>
+        <a href="#CSS_Selectors" class="nav-link">CSS Selectors</a>
+        <a href="#Box_Model" class="nav-link">Box Model</a>
+        <a href="#Flexbox_Layout" class="nav-link">Flexbox Layout</a>
+        <a href="#CSS_Grid" class="nav-link">CSS Grid</a>
+        <a href="#Media_Queries" class="nav-link">Media Queries</a>
+    </nav>
+
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <p>CSS (Cascading Style Sheets) is the language used to style HTML documents. It describes how HTML elements
+                should be displayed.</p>
+            <p>CSS saves a lot of work because it can control the layout of multiple web pages all at once.</p>
+            <p>External stylesheets are stored in CSS files and can be linked to HTML documents.</p>
+            <code>
+                /* This is a CSS comment */
+                body {
+                  font-family: Arial, sans-serif;
+                  margin: 0;
+                  padding: 20px;
+                }
+            </code>
+            <p>CSS can be added to HTML documents in 3 ways:</p>
+            <ul>
+                <li>Inline - by using the style attribute inside HTML elements</li>
+                <li>Internal - by using a &lt;style&gt; element in the &lt;head&gt; section</li>
+                <li>External - by using a &lt;link&gt; element to link to an external CSS file</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="CSS_Selectors">
+            <header>CSS Selectors</header>
+            <p>CSS selectors are used to "find" (or select) the HTML elements you want to style.</p>
+            <p>We can divide CSS selectors into five categories:</p>
+            <ul>
+                <li>Simple selectors (select elements based on name, id, class)</li>
+                <li>Combinator selectors (select elements based on a specific relationship between them)</li>
+                <li>Pseudo-class selectors (select elements based on a certain state)</li>
+                <li>Pseudo-elements selectors (select and style a part of an element)</li>
+                <li>Attribute selectors (select elements based on an attribute or attribute value)</li>
+            </ul>
+            <p>The element selector selects HTML elements based on the element name.</p>
+            <code>
+                p {
+                  text-align: center;
+                  color: red;
+                }
+            </code>
+            <p>The id selector uses the id attribute of an HTML element to select a specific element.</p>
+            <code>
+                #navbar {
+                  position: fixed;
+                  width: 300px;
+                }
+            </code>
+        </section>
+
+        <section class="main-section" id="Box_Model">
+            <header>Box Model</header>
+            <p>All HTML elements can be considered as boxes. In CSS, the term "box model" is used when talking about
+                design and layout.</p>
+            <p>The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins,
+                borders, padding, and the actual content.</p>
+            <p>The box model allows us to add a border around elements, and to define space between elements.</p>
+            <code>
+                div {
+                  width: 300px;
+                  padding: 10px;
+                  border: 5px solid gray;
+                  margin: 20px;
+                }
+            </code>
+            <p>The total width of an element should be calculated like this:</p>
+            <p>Total element width = width + left padding + right padding + left border + right border + left margin +
+                right margin</p>
+            <ul>
+                <li>Content - The content of the box, where text and images appear</li>
+                <li>Padding - Clears an area around the content. The padding is transparent</li>
+                <li>Border - A border that goes around the padding and content</li>
+                <li>Margin - Clears an area outside the border. The margin is transparent</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="Flexbox_Layout">
+            <header>Flexbox Layout</header>
+            <p>The Flexbox Layout (Flexible Box) module aims at providing a more efficient way to lay out, align and
+                distribute space among items in a container, even when their size is unknown and/or dynamic.</p>
+            <p>The main idea behind the flex layout is to give the container the ability to alter its items'
+                width/height (and order) to best fill the available space.</p>
+            <p>A flex container expands items to fill available free space or shrinks them to prevent overflow.</p>
+            <code>
+                .container {
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+                }
+            </code>
+            <p>Properties for the Parent (flex container):</p>
+            <ul>
+                <li>display: flex - defines a flex container</li>
+                <li>flex-direction - defines the direction of flex items</li>
+                <li>justify-content - aligns flex items along the main axis</li>
+                <li>align-items - aligns flex items along the cross axis</li>
+                <li>flex-wrap - specifies whether flex items should wrap or not</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="CSS_Grid">
+            <header>CSS Grid</header>
+            <p>CSS Grid Layout is a two-dimensional layout system designed for the web. It lets you lay content out in
+                rows and columns.</p>
+            <p>Grid is the very first CSS module created specifically to solve the layout problems we've all been
+                hacking our way around for as long as we've been making websites.</p>
+            <p>To get started you have to define a container element as a grid with display: grid, set the column and
+                row sizes with grid-template-columns and grid-template-rows, and then place its child elements into the
+                grid with grid-column and grid-row.</p>
+            <code>
+                .grid-container {
+                  display: grid;
+                  grid-template-columns: 1fr 1fr 1fr;
+                  grid-gap: 20px;
+                }
+            </code>
+            <p>Properties for the Grid Container:</p>
+            <ul>
+                <li>display: grid - defines a grid container</li>
+                <li>grid-template-columns - defines the columns of the grid</li>
+                <li>grid-template-rows - defines the rows of the grid</li>
+                <li>grid-gap - defines the gap between grid items</li>
+                <li>grid-template-areas - defines grid template areas</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="Media_Queries">
+            <header>Media Queries</header>
+            <p>Media queries are a popular technique for delivering a tailored style sheet to different devices.</p>
+            <p>Media queries can be used to check many things, such as:</p>
+            <ul>
+                <li>width and height of the viewport</li>
+                <li>width and height of the device</li>
+                <li>orientation (is the tablet/phone in landscape or portrait mode?)</li>
+                <li>resolution</li>
+            </ul>
+            <p>Using media queries are a popular technique for delivering a tailored style sheet to desktops, laptops,
+                tablets, and mobile phones.</p>
+            <code>
+                @media screen and (max-width: 600px) {
+                  body {
+                    background-color: lightblue;
+                  }
+                }
+            </code>
+            <p>You can also have different stylesheets for different media:</p>
+            <code>
+                <link rel="stylesheet" media="screen and (max-width: 600px)" href="small.css">
+            </code>
+            <p>Media queries are used for responsive web design. With media queries, you can define completely different
+                styles for different browser sizes.</p>
+        </section>
+    </main>
+</body>
+
+</html>
